@@ -1,0 +1,212 @@
+/* Madara palette. The main reading surface stays calm and high contrast. */
+body[data-dsh-madara-theme="on"] {
+  --madara-ink: #101b2e;
+  --madara-night: #142238;
+  --madara-panel: #1c3049;
+  --madara-edge: #48617d;
+  --madara-cream: #f4edda;
+  --madara-mint: #9ee6bd;
+  --madara-gold: #f3ca78;
+  --madara-ui-font: "Segoe UI", "Microsoft YaHei", sans-serif;
+  --dsw-font-family: var(--madara-ui-font) !important;
+  --dsw-font-family-brand: "Madara Silkscreen", "Segoe UI", sans-serif !important;
+  --dsw-radius-xs: 2px;
+  --dsw-radius-sm: 2px;
+  --dsw-radius-md: 3px;
+  --dsw-radius-lg: 3px;
+  --dsw-radius-xl: 4px;
+  --dsw-radius-panel: 4px;
+  --dsh-windows-content-radius: 0px;
+  --dsw-elevation-stroke: 0 0 0 1px #48617d;
+  --dsw-elevation-panel: 0 0 0 1px #48617d, 4px 4px 0 #091221;
+  --dsw-elevation-prominent: 0 0 0 2px #48617d, 6px 6px 0 #091221;
+  --dsw-elevation-soft: 0 0 0 2px #48617d, 5px 5px 0 #091221;
+  --dsw-menu-backdrop-filter: none;
+  --dsh-scrollbar-width: 7px;
+  --dsh-scrollbar-thumb: #48617d;
+  --dsh-scrollbar-thumb-hover: #9ee6bd;
+  color-scheme: dark;
+  background: var(--madara-night);
+  color: var(--madara-cream);
+  font-family: var(--madara-ui-font);
+}
+
+body[data-dsh-madara-theme="on"] :is(button, input, select, textarea, [role="dialog"], [role="menu"], [role="menuitem"], [role="tooltip"]) {
+  border-radius: 3px !important;
+  corner-shape: round !important;
+}
+/* Proportional CJK text and separate monospaced code keep both scripts aligned. */
+body[data-dsh-madara-theme="on"][data-dsh-madara-font="on"] {
+  --madara-ui-font: "Madara Fusion Pixel", "Microsoft YaHei", sans-serif;
+  --dsh-font-family-text: var(--madara-ui-font) !important;
+  --dsh-font-family-code: "Madara Fusion Pixel Mono", Consolas, monospace !important;
+  --ds-font-family-code: "Madara Fusion Pixel Mono", Consolas, monospace !important;
+  font-family: var(--madara-ui-font) !important;
+  font-synthesis: none;
+  font-kerning: normal;
+}
+body[data-dsh-madara-theme="on"][data-dsh-madara-font="on"] :is(button, input, select, textarea, [contenteditable="true"]) {
+  font-family: var(--madara-ui-font) !important;
+  font-synthesis: none;
+}
+body[data-dsh-madara-theme="on"][data-dsh-madara-font="on"] :is(pre, code, .cm-editor, .cm-content, .cm-gutters) {
+  font-family: "Madara Fusion Pixel Mono", Consolas, monospace !important;
+  font-synthesis: none;
+}
+body[data-dsh-madara-theme="on"] button { transition-duration: 80ms; }
+body[data-dsh-madara-theme="on"] :focus-visible { outline: 2px solid var(--madara-gold); outline-offset: 3px; }
+body[data-dsh-madara-theme="on"] ::selection { color: #101b2e; background: #9ee6bd; }
+body[data-dsh-madara-theme="on"] ::-webkit-scrollbar-thumb { border-radius: 0 !important; }
+body[data-dsh-madara-theme="on"] :is(.BynINW_centerCol, .Dc7zOa_root) { border-radius: 0 !important; }
+body[data-dsh-madara-theme="on"][data-dsh-madara-texture="on"] .Dc7zOa_root[data-phase="hero"] {
+  background-image: radial-gradient(#48617d38 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Sidebar: a console bezel, a physical start key, and a readable active tab. */
+body[data-dsh-madara-theme="on"] .BynINW_sidebarCol { border-right: 2px solid #40556e !important; }
+body[data-dsh-madara-theme="on"] ._2H3hWW_root { padding-inline: 14px; }
+body[data-dsh-madara-theme="on"] ._2H3hWW_brand { color: var(--madara-cream); }
+body[data-dsh-madara-theme="on"] ._2H3hWW_brandMark { color: var(--madara-mint); }
+body[data-dsh-madara-theme="on"] ._2H3hWW_newSession {
+  color: #142238 !important;
+  background: var(--madara-mint) !important;
+  border: 2px solid #c6f6d9 !important;
+  box-shadow: 3px 3px 0 #477f70;
+  font-weight: 650;
+  height: 40px;
+  margin-bottom: 18px !important;
+}
+body[data-dsh-madara-theme="on"] ._2H3hWW_newSession:hover { background: #b9f1ce !important; }
+body[data-dsh-madara-theme="on"] ._2H3hWW_newSession:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 #477f70; }
+body[data-dsh-madara-theme="on"] ._2H3hWW_collapsed ._2H3hWW_newSession { margin-bottom: 0 !important; box-shadow: none; }
+body[data-dsh-madara-theme="on"] ._2H3hWW_panelRow { border: 1px solid transparent; margin-block: 2px; }
+body[data-dsh-madara-theme="on"] ._2H3hWW_panelRow:hover { background: #243c56; }
+body[data-dsh-madara-theme="on"] ._2H3hWW_panelRow._2H3hWW_panelActive {
+  color: var(--madara-gold);
+  background: #263c52;
+  border-color: #52667b;
+  box-shadow: inset 3px 0 0 var(--madara-gold);
+}
+
+/* Hero and composer: the cream display is the main focal point. */
+body[data-dsh-madara-theme="on"] .Hqq-bq_stack::before {
+  content: "PLAYER 01  /  READY";
+  display: block;
+  text-align: center;
+  color: var(--madara-mint);
+  font: 12px/20px "Madara Silkscreen", monospace;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+body[data-dsh-madara-theme="on"] .Hqq-bq_headline { color: var(--madara-cream); margin-bottom: 12px; }
+body[data-dsh-madara-theme="on"] .Hqq-bq_previewBadge { border: 1px solid #6b6048; color: var(--madara-gold); background: #302c29; border-radius: 2px; }
+body[data-dsh-madara-theme="on"] .Hqq-bq_fish { color: var(--madara-mint); }
+body[data-dsh-madara-theme="on"] .RlGAzG_card {
+  --dsw-alias-label-primary: #17263b;
+  --dsw-alias-label-secondary: #445266;
+  --dsw-alias-label-tertiary: #5a6574;
+  --dsw-alias-label-caption: #657080;
+  --dsw-alias-border-l2: #b6b7a7;
+  --dsw-alias-border-l3: #aaa996;
+  --dsw-alias-interactive-bg-hover: #dedbc8;
+  --dsw-alias-interactive-bg-active: #d5d7c5;
+  --dsw-specific-selector: #e3dfcd;
+  --dsw-alias-bg-module-platform: #e3dfcd;
+  color-scheme: light;
+  background: var(--madara-cream) !important;
+  color: #17263b;
+  border: 2px solid #c1baa3;
+  border-top-color: #fff9e9;
+  border-left-color: #fff9e9;
+  box-shadow: 0 0 0 2px #40556e, 6px 6px 0 #091221 !important;
+  border-radius: 4px !important;
+  margin-bottom: 6px;
+}
+body[data-dsh-madara-theme="on"] .RlGAzG_input { color: #17263b !important; caret-color: #396f5b; }
+body[data-dsh-madara-theme="on"] .RlGAzG_primary {
+  color: #152b2b !important;
+  background: #9ee6bd !important;
+  border: 2px solid #477f70;
+  box-shadow: 2px 2px 0 #728c78;
+  border-radius: 2px !important;
+}
+body[data-dsh-madara-theme="on"] .RlGAzG_primary:hover:not(:disabled) { background: #b9f1ce !important; }
+body[data-dsh-madara-theme="on"] .RlGAzG_primary:active:not(:disabled) { transform: translate(1px, 0); box-shadow: none; }
+body[data-dsh-madara-theme="on"] .Dc7zOa_tabActive { color: var(--madara-gold); }
+body[data-dsh-madara-theme="on"] .Dc7zOa_tabActive::after { background: var(--madara-gold); height: 3px; }
+
+/* Text, code, menus, and settings use the native semantic colors. */
+body[data-dsh-madara-theme="on"] :is(pre, code) { border-radius: 3px !important; }
+body[data-dsh-madara-theme="on"] [role="dialog"] { box-shadow: 0 0 0 2px #60748a, 8px 8px 0 #091221 !important; }
+body[data-dsh-madara-theme="on"] [role="menu"] { border: 1px solid #60748a; box-shadow: 4px 4px 0 #091221; }
+body[data-dsh-madara-theme="on"] [role="tooltip"] { border: 1px solid #61768e; }
+body[data-dsh-madara-theme="on"] .madara-theme-settings { border: 1px solid #48617d; background: #1c3049; }
+.madara-theme-settings { margin: 12px 0; padding: 16px; border-radius: 4px; border: 1px solid var(--dsw-alias-border-l3); }
+.madara-theme-settings-title { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 8px; font-size: 14px; font-weight: 600; }
+.madara-theme-settings-caption { color: var(--dsw-alias-label-tertiary); font: 11px/18px "Madara Silkscreen", monospace; letter-spacing: .6px; }
+.madara-theme-settings-note { color: var(--dsw-alias-label-secondary); font-size: 12px; line-height: 20px; margin: 8px 0 12px; }
+.madara-theme-settings-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.madara-theme-control { font: inherit; font-size: 12px; line-height: 20px; padding: 6px 12px; border: 1px solid var(--dsw-alias-border-l4); background: var(--dsw-alias-bg-layer-2); color: var(--dsw-alias-label-primary); cursor: pointer; border-radius: 2px; }
+.madara-theme-control[aria-pressed="true"] { background: #9ee6bd; color: #142238; border-color: #c6f6d9; box-shadow: 2px 2px 0 #477f70; }
+@media (prefers-reduced-motion: reduce) {
+  body[data-dsh-madara-theme="on"] button { transition: none !important; }
+}
+
+/* Madara palette is scoped and can be switched back to the handheld palette. */
+body[data-dsh-madara-theme="on"] {
+  --madara-ink:#090f1c;--madara-night:#111827;--madara-panel:#192132;--madara-edge:#4c5367;
+  --madara-cream:#f4edda;--madara-mint:#ce727b;--madara-gold:#f3ca78;
+  --dsw-elevation-panel:0 0 0 1px #4c5367,4px 4px 0 #060b15;
+  --dsw-elevation-prominent:0 0 0 2px #4c5367,6px 6px 0 #060b15;
+}
+body[data-dsh-madara-theme="on"] ::selection {color:#f4edda;background:#9b3e50}
+body[data-dsh-madara-theme="on"] .BynINW_sidebarCol {border-right:2px solid #403645!important}
+body[data-dsh-madara-theme="on"] ._2H3hWW_brandMark {color:#ce727b}
+body[data-dsh-madara-theme="on"] ._2H3hWW_newSession {
+  color:#fff3e1!important;background:#ac4252!important;border-color:#d57a7e!important;
+  box-shadow:3px 3px 0 #5e2739;font-weight:400;
+}
+body[data-dsh-madara-theme="on"] ._2H3hWW_newSession:hover {background:#c25362!important}
+body[data-dsh-madara-theme="on"] ._2H3hWW_newSession:active {box-shadow:1px 1px 0 #5e2739}
+body[data-dsh-madara-theme="on"] ._2H3hWW_panelRow:hover {background:#242a3b}
+body[data-dsh-madara-theme="on"] ._2H3hWW_panelRow._2H3hWW_panelActive {
+  background:#322432;border-color:#624250;color:#f3ca78;box-shadow:inset 3px 0 0 #ce727b;
+}
+body[data-dsh-madara-theme="on"][data-dsh-madara-texture="on"] .Dc7zOa_root[data-phase="hero"] {
+  isolation:isolate;background-image:radial-gradient(#97526325 1px,transparent 1px);background-size:20px 20px;
+}
+body[data-dsh-madara-theme="on"][data-dsh-madara-texture="on"] .Dc7zOa_root[data-phase="hero"]::before {
+  content:"";position:absolute;right:-28px;top:12%;width:min(48vw,500px);aspect-ratio:1;
+  background-size:contain;background-repeat:no-repeat;
+  image-rendering:pixelated;opacity:.12;pointer-events:none;z-index:0;
+  mask-image:linear-gradient(135deg,transparent 8%,#000 60%,#000 95%);
+}
+body[data-dsh-madara-theme="on"] .Dc7zOa_root[data-phase="hero"] .Hqq-bq_stack {position:relative;z-index:1}
+body[data-dsh-madara-theme="on"] .Hqq-bq_stack::before {content:"UCHIHA / MADARA";color:#d58188;letter-spacing:2px}
+body[data-dsh-madara-theme="on"] .Hqq-bq_fish {color:#d58188}
+body[data-dsh-madara-theme="on"] .Hqq-bq_previewBadge {color:#f3ca78;background:#342b29;border-color:#685548}
+body[data-dsh-madara-theme="on"] .RlGAzG_card {
+  --dsw-alias-label-primary:#f4edda;--dsw-alias-label-secondary:#c8c6c2;
+  --dsw-alias-label-tertiary:#a8b0c0;--dsw-alias-label-caption:#9ea7b9;
+  --dsw-alias-border-l2:#4c5367;--dsw-alias-border-l3:#646075;
+  --dsw-alias-interactive-bg-hover:#303144;--dsw-alias-interactive-bg-active:#423345;
+  --dsw-specific-selector:#262c40;--dsw-alias-bg-module-platform:#262c40;
+  color-scheme:dark;color:#f4edda;background:#192132f5!important;
+  border:2px solid #70505e;border-top-color:#ba737d;border-left-color:#8a5a6a;
+  box-shadow:0 0 0 1px #2b3146,5px 5px 0 #080d18!important;
+}
+body[data-dsh-madara-theme="on"] .RlGAzG_input {color:#f4edda!important;caret-color:#f3ca78}
+body[data-dsh-madara-theme="on"] .RlGAzG_primary {
+  color:#fff3e1!important;background:#ac4252!important;border:2px solid #d57a7e;
+  box-shadow:2px 2px 0 #5e2739;
+}
+body[data-dsh-madara-theme="on"] .RlGAzG_primary:hover:not(:disabled) {background:#c25362!important}
+body[data-dsh-madara-theme="on"] .Dc7zOa_tabActive {color:#f3ca78}
+body[data-dsh-madara-theme="on"] .Dc7zOa_tabActive::after {background:#ce727b}
+body[data-dsh-madara-theme="on"] .madara-theme-settings {background:#192132;border-color:#624250}
+body[data-dsh-madara-theme="on"] .madara-theme-control[aria-pressed="true"] {
+  color:#fff3e1;background:#ac4252;border-color:#d57a7e;box-shadow:2px 2px 0 #5e2739;
+}
+body[data-dsh-madara-theme="on"] .madara-theme-control:disabled {opacity:.5;cursor:default}
+@media(max-width:800px) {body[data-dsh-madara-theme="on"] .Dc7zOa_root[data-phase="hero"]::before{width:300px;opacity:.08}}

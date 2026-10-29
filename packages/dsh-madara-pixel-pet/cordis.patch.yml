@@ -1,0 +1,12 @@
+- insert:
+    - id: madara-pixel-pet
+      name: dsh-madara-pixel-pet
+      config:
+        enabled: true
+        scale: 1
+        bubbleScale: 1
+        activityLevel: normal
+        reducedMotion: false
+        soundEnabled: true
+        bubbleMode: always
+        includeSubagents: false

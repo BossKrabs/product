@@ -1,0 +1,8 @@
+{
+  "name": "bosskrabs-harness-plugins",
+  "private": true,
+  "description": "Independently installable Madara pixel theme and desktop companion.",
+  "workspaces": [
+    "packages/*"
+  ]
+}

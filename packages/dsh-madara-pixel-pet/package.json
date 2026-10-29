@@ -1,0 +1,68 @@
+{
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "engines": {
+    "node": ">=22.19",
+    "dsh": "0.2.1-rc.2"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "madara",
+    "pixel-art"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "name": "dsh-madara-pixel-pet",
+  "description": "宇智波斑像素桌宠：16 组透明动作，跟随 Harness 任务状态，支持拖动与点击互动。",
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "settings-scope.js",
+    "cordis.patch.yml",
+    "assets",
+    "LICENSE",
+    "THIRD-PARTY-NOTICES.md",
+    "ASSET-NOTICE.md",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "dependencies": {
+    "dsh-dafeiyu": "0.1.22",
+    "@deepseek-ai/schemastery": "3.18.4"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BossKrabs/product.git",
+    "directory": "packages/dsh-madara-pixel-pet"
+  },
+  "homepage": "https://github.com/BossKrabs/product/tree/main/packages/dsh-madara-pixel-pet",
+  "bugs": {
+    "url": "https://github.com/BossKrabs/product/issues"
+  },
+  "author": {
+    "name": "BossKrabs",
+    "url": "https://github.com/BossKrabs"
+  }
+}

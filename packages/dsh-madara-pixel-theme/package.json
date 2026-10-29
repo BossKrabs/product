@@ -1,0 +1,66 @@
+{
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "engines": {
+    "node": ">=22.19",
+    "dsh": "0.2.1-rc.2"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "madara",
+    "pixel-art"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "name": "dsh-madara-pixel-theme",
+  "description": "宇智波斑像素主题：深蓝暗红配色、中文像素字体和可跳过的写轮眼启动动画。",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "LICENSE",
+    "ASSET-NOTICE.md",
+    "licenses",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "node build.cjs",
+    "test": "node --test test/*.test.cjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-theme",
+        "@deepseek-ai/dsh-client-ui-slots"
+      ],
+      "platform": "web"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BossKrabs/product.git",
+    "directory": "packages/dsh-madara-pixel-theme"
+  },
+  "homepage": "https://github.com/BossKrabs/product/tree/main/packages/dsh-madara-pixel-theme",
+  "bugs": {
+    "url": "https://github.com/BossKrabs/product/issues"
+  },
+  "author": {
+    "name": "BossKrabs",
+    "url": "https://github.com/BossKrabs"
+  }
+}
